@@ -587,8 +587,8 @@ void function UpdateTrialLabel()
 	//bool isTrialVersion
 	//bool lastIsTrialVersion = Script_IsRunningTrialVersion()
 
-	Hud_SetColor( file.trialLabel, 255, 255, 255, GetConVarInt( "vp_title_transparency" ) )
-	Hud_SetText( file.trialLabel, "Vanilla+" )
+	Hud_SetColor( file.trialLabel, 250, 0, 0, GetConVarInt( "vp_title_transparency" ) )
+	Hud_SetText( file.trialLabel, "- VanillaPlusCN" )
 	Hud_SetVisible( file.trialLabel, true )
 
 	//while ( GetTopNonDialogMenu() == file.menu )

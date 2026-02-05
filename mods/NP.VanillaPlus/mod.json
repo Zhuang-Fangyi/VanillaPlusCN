@@ -41,7 +41,7 @@
 		},
 		{
 			"Name": "vp_title_transparency",
-			"DefaultValue": "155",
+			"DefaultValue": "255",
 			"Flags": 16777216
 		}
 	],
