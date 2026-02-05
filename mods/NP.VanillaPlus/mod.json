@@ -47,6 +47,13 @@
 	],
 	"Scripts": [
 		{
+			"Path": "vanillaplus_logo_rui.nut",
+			"RunOn": "CLIENT",
+			"ClientCallback": {
+				"After": "VP_RuiPrecache"
+			}
+		},
+		{
 			"Path": "ui/vanillaplus_modinfo.nut",
 			"RunOn": "UI"
 		},
