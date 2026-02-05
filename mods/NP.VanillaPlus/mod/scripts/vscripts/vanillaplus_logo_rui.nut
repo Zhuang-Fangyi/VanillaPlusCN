@@ -8,7 +8,12 @@ void function VP_RuiPrecache()
 void function VP_RuiInit()
 {
     WaitFrame()
-	string playerName = GetLocalClientPlayer().GetPlayerName()
+	string playerName
+	#if MP
+	playerName = GetLocalClientPlayer().GetPlayerName()
+	#else
+	playerName = GetConVarString( "name" )
+	#endif
 	string playerUID = NSGetLocalPlayerUID()
 
 	string topText = ""
