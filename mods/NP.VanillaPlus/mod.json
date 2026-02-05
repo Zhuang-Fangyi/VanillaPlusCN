@@ -47,6 +47,10 @@
 	],
 	"Scripts": [
 		{
+			"Path": "ui/vanillaplus_modinfo.nut",
+			"RunOn": "UI"
+		},
+		{
 			"Path": "ui/ns_menu_modmenu.nut",
 			"RunOn": "UI",
 			"UICallback": {

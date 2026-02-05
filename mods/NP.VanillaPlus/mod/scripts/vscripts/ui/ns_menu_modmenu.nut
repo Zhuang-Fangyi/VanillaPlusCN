@@ -1,6 +1,6 @@
 untyped
 #if VANILLA
-// because we want Northstar to do its thing 
+// because we want Northstar to do its thing
 // only run if in vanilla compatibility
 
 // taken directly from Northstar.Client
@@ -8,7 +8,6 @@ untyped
 global function AddNorthstarModMenu
 global function AddNorthstarModMenu_MainMenuFooter
 global function ReloadMods
-
 
 struct panelContent {
 	ModInfo& mod
@@ -215,10 +214,10 @@ void function OnModButtonPressed( var button )
 		CoreModToggleDialog( modName )
 	else
 	{
-		NSSetModEnabled( modName, mod.version, !mod.enabled )
+		NSSetModEnabled( modName, !mod.enabled )
 
 		// retrieve state of the mod that just got toggled
-		array<ModInfo> infos = NSGetModInformation( mod.name )
+		array<ModInfo> infos = VP_GetModInformation( mod.name )
 		foreach ( modInfo in infos )
 		{
 			if ( modInfo.name != modName || modInfo.version != mod.version )
@@ -309,10 +308,10 @@ void function DisableMod()
 {
 	ModInfo mod = file.mods[ int ( Hud_GetScriptID( Hud_GetParent( file.currentButton ) ) ) + file.scrollOffset - 1 ].mod
 	string modName = mod.name
-	NSSetModEnabled( modName, mod.version, false )
+	NSSetModEnabled( modName, false )
 
 	// retrieve state of the mod that just got toggled
-	array<ModInfo> infos = NSGetModInformation( mod.name )
+	array<ModInfo> infos = VP_GetModInformation( mod.name )
 	foreach ( modInfo in infos )
 	{
 		if ( modInfo.name != modName || modInfo.version != mod.version )
@@ -332,7 +331,7 @@ void function DisableMod()
 array<ModInfo> function GetEnabledModsArray()
 {
 	array<ModInfo> enabledMods
-	foreach ( ModInfo mod in NSGetModsInformation() )
+	foreach ( ModInfo mod in VP_GetModsInformation() )
 	{
 		if ( mod.enabled )
 			enabledMods.append( mod )
@@ -358,7 +357,7 @@ void function UpdateList()
 
 void function RefreshMods()
 {
-	array<ModInfo> mods = NSGetModsInformation()
+	array<ModInfo> mods = VP_GetModsInformation()
 	file.mods.clear()
 
 	bool reverse = GetConVarBool( "modlist_reverse" )
@@ -439,7 +438,7 @@ void function DisplayModPanels()
 		var line = Hud_GetChild( panel, "BottomLine" )
 		var warning = Hud_GetChild( panel, "WarningImage" )
 		var enabledImage = Hud_GetChild( panel, "EnabledImage" )
-		
+
 		if ( c.isHeader )
 		{
 			Hud_SetEnabled( btn, false )
