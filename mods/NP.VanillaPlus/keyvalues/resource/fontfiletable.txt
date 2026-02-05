@@ -1,10 +1,29 @@
 FontFileTable
 {
-	"arial unicode ms"			"resource/Lato-Regular.ttf"
+	"Default"					"resource/MiSans-Medium.ttf"	[!$JAPANESE && !$TCHINESE]
+	"Default"					"resource/MiSans-Medium.ttf"		[$JAPANESE]
+	"Default"					"resource/MiSans-Medium.ttf"		[$TCHINESE]
 
-	"lucida console"			"resource/NorthstarMono.ttf"			[$PC]
+	"DefaultBold"				"resource/MiSans-Medium.ttf"	[!$JAPANESE && !$TCHINESE]
+	"DefaultBold"				"resource/MiSans-Medium.ttf"		[$JAPANESE]
+	"DefaultBold"				"resource/MiSans-Medium.ttf"		[$TCHINESE]
 
-	"arial"						"resource/Lato-Regular.ttf"
-	"arial bold"				"resource/Lato-Regular.ttf"
-	"arial narrow"				"resource/Lato-Regular.ttf"
+	"Titanfall"					"resource/MiSans-Medium.ttf"		[!$JAPANESE && !$TCHINESE && !$RUSSIAN]
+	"Titanfall"					"resource/MiSans-Medium.ttf"		[$JAPANESE]
+	"Titanfall"					"resource/MiSans-Medium.ttf"		[$TCHINESE]
+	"Titanfall"					"resource/MiSans-Medium.ttf"	[$RUSSIAN]
+
+	"lucida console"			"resource/MiSans-Medium.ttf"						[$PC]
+	"lucida console"			"resource/MiSans-Medium.ttf"	[$GAMECONSOLE]
+
+	"tahoma"					"resource/MiSans-Medium.ttf"						[$PC]
+	"tahoma"					"resource/MiSans-Medium.ttf"  	[$GAMECONSOLE]
+
+	"tahoma bold"				"resource/MiSans-Medium.ttf" 					[$PC]
+	"tahoma bold"				"resource/MiSans-Medium.ttf"  	[$GAMECONSOLE]
+
+	"courier new"				"resource/MiSans-Medium.ttf"						[$PC]
+	"courier new"				"resource/MiSans-Medium.ttf"					[$GAMECONSOLE]
+
+	"times new roman"			"resource/MiSans-Medium.ttf"						[$PC]
 }
