@@ -1,7 +1,7 @@
 {
     "name": "VanillaPlusCN",
-    "version_number": "3.0.0",
+    "version_number": "3.0.1",
     "website_url": "https://github.com/Zhuang-Fangyi/VanillaPlusCN",
-    "description": "THIS MOD HAS SPECIAL INSTALL INSTRUCTIONS IN THE DESCRIPTION, PLEASE READ THEM. Modified Northstar.Client to load Client-Side mods on Vanilla servers",
+    "description": "",
     "dependencies": []
 }
